@@ -2,12 +2,35 @@
 let resultado = 0;
 let peso = 0;
 let altura = 0;
-let sexo =  prompt("BINVENID@ A LA CALCULADORA DEL IMC! antes debera indicar su sexo - elija una de las siguientes opciones:\n\n 1-HOMBRE\n\n 2-MUJER\n\n");
+let sexo = 0;
+var contador = 0;
+console.log(contador);
+
+function sumar (){
+    contador++;
+    console.log(contador);
+}
+const sumarContador = contador => contador++;
+
+var btn = document.getElementById('btn');
+
+    btn.addEventListener('click',sumar,true);
 
 
-while(sexo!=='1' && sexo!=='2'){
-     sexo = prompt("VALOR INCORRECTO!, por favor - elija una de las siguientes opciones:\n\n 1-HOMBRE\n\n 2-MUJER\n\n");
-    }
+
+console.log(contador);
+
+while(contador <=5){
+    console.log(contador);
+}
+
+if(contador>0){
+    sexo =  prompt("BINVENID@ A LA CALCULADORA DEL IMC! antes debera indicar su sexo - elija una de las siguientes opciones:\n\n 1-HOMBRE\n\n 2-MUJER\n\n");
+
+    while(sexo!=='1' && sexo!=='2'){
+         sexo = prompt("VALOR INCORRECTO!, por favor - elija una de las siguientes opciones:\n\n 1-HOMBRE\n\n 2-MUJER\n\n");
+        } 
+}
 
 function pedirPyA(){
    peso = parseInt(prompt("ingrese su peso en kg"));
@@ -18,6 +41,13 @@ function calcularImc(n1,n2){ // CALCULO MATEMATICO IMC
     n2 = n2 / 100; // pasamos a decimal
     return parseFloat(n1/((n2*2)).toFixed(2));
 }
+
+const calcularImc = (n1,n2)=> {
+    n2 = n2 / 100; // pasamos a decimal
+    return parseFloat(n1/((n2*2)).toFixed(2));
+}
+
+
 
 function evaluarRM(resultado){ //EVALUA SOBRE TABLAS MASCULINA
     switch(true){
@@ -89,6 +119,12 @@ switch(sexo){ //evalua dependiendo si es FEMENINO O MASCULINO
         console.log("OPCION NO VALIDA")
         breack;
 }
+
+
+
+
+
+
 
 
 
